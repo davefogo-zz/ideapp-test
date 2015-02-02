@@ -20,7 +20,7 @@ class Invoices::PurchasesController < ApplicationController
   end
 
   def create
-    @invoice = Inovice.find(params[:invoice_id])
+    @invoice = Invoice.find(params[:invoice_id])
     @purchase = Purchase.new(purchase_params)
     @purchase.invoice = @invoice
 
